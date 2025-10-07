@@ -13,7 +13,7 @@ En esta primera fase, se ha desarrollado la interfaz de la aplicación web de aj
 - Diseño responsivo en resoluciones de 1728x864 a 1920x1080 píxeles.
 - Inclusión de animaciones y transiciones CSS para elementos relevantes.
 
-**Note:**
+**Nota:**
 Se ha utilizado únicamente HTML y CSS, sin JavaScript ni frameworks, garantizando coherencia visual y reutilización de estilos mediante una única hoja de estilos compartida entre todas las páginas.
 
 **Tip:**
