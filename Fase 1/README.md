@@ -1,5 +1,5 @@
 
-# Entregable Fase 1
+# Fase 1
 
 En esta primera fase, se ha desarrollado la interfaz de la aplicación web de ajedrez en línea. La estructura incluye todas las páginas y elementos necesarios para la navegación y experiencia de usuario, aunque aún no se ha implementado la lógica de juego ni la conexión con base de datos.
 
