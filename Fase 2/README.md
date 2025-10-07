@@ -1,4 +1,4 @@
-# Entregable Fase 2
+# Fase 2
 
 En esta segunda fase, se ha ampliado la aplicación web de ajedrez para permitir que dos usuarios jueguen en el mismo computador, incorporando además funcionalidades básicas de autenticación y ejecución sobre un servidor Express.
 
