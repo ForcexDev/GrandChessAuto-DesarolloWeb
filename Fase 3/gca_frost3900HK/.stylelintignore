@@ -1,0 +1,15 @@
+
+**/*.js
+**/*.jsx
+
+**/*.hbs
+**/*.handlebars
+
+**/*.json
+
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.svg
+**/*.webp

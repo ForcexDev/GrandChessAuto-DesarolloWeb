@@ -1,0 +1,153 @@
+<div id="mk4">
+    <div id="bloque-t" class="container">
+        <div id="g2" class="container">
+            <div id="titulos" class="row">
+                <h1>Guerras inconclusas</h1>
+            </div>
+
+            <div id="i1" class="row">
+                <div class="m"> La BATALLA de las 1000 CORONAS </div>
+                <a href="/playstation" class="btn-success">Continuar!</a>
+            </div>
+            <br>
+            <div id="i2" class="row">
+                <div class="m"> El COMBATE del valle del PARAISO </div>
+                <a href="/playstation" class="btn-success">Continuar!</a>
+            </div>
+            <br>
+            <div id="i3" class="row">
+                <div class="m"> La GUERRA de la laguna CRISTALINA </div>
+                <a href="/playstation" class="btn-success">Continuar!</a>
+            </div>
+            <br>
+            <div id="i4" class="row">
+                <div class="m"> El ASEDIO de la REPOSTERIA </div>
+                <a href="/playstation" class="btn-success">Continuar!</a>
+            </div>
+            <br>
+            <div id="i5" class="row">
+                <div class="m"> La GUERRA de la LEGENDARIA arma de FUEGO</div>
+                <a href="/playstation" class="btn-success">Continuar!</a>
+            </div>
+
+            <div id="titulos2" class="row">
+                <h1>Tus ultimas batallas</h1>
+            </div>
+
+            <div class="row"><div class="n"> La ODISEA de la MANTEQUILLA --> VICTORIA</div></div>
+            <div class="row"><div class="n"> La BATALLA de los 7 MONTES --> DERROTA </div></div>
+            <div class="row"><div class="n"> El ASEDIO de lago RUBY--> VICTORIA</div></div>
+            <div class="row"><div class="n"> El COMBATE de NAPOLES --> VICTORIA</div></div>
+            <div class="row"><div class="n"> La BATALLA de GERUNDIO --> DERROTA</div></div>
+        </div>
+
+        <div id="g1" class="container">
+            <div id="space-logo" class="container">
+                <img src="/img/home/grand_chess_auto_256x256.png" alt="mainLogo">
+            </div>
+            <br><br><br><br><br>
+
+            <a id="partida-public" href="/playstation" class="btn-success">Iniciar una partida en linea</a>
+            <br><br><br><br>
+
+            <a id="partida-private" href="/playstation" class="btn-success">Iniciar una partida local</a>
+            <br><br><br><br>
+
+            <a id="tuperfil" href="/profile" class="btn-success">Ver perfil</a>
+            <br><br><br><br>
+
+            <a id="reglas" href="/rules" class="btn-success">Reglas del juego</a>
+            <br><br><br><br>
+
+            <a id="sobrenos" href="/about" class="btn-success">Informacion adicional</a>
+            <br><br><br><br>
+
+            <a id="quit" href="/logout" class="btn-success">Cerrar sesion</a>
+        </div>
+
+        <div id="g3" class="container">
+            <div id="titulos3" class="row">
+                <h1> Guerras activas alrededor del globo</h1>
+            </div>
+
+            <div id="i6" class="row">
+                <div class="v"> La GUERRA de SAN MARTIN y ROGERS </div>
+                <a href="/playstation" class="btn-success">Jugar</a>
+                <a href="/playstation" class="btn-success">Observar</a>
+            </div>
+            <br>
+            <div id="i7" class="row">
+                <div class="v"> INGLATERRA bajo FUEGO </div>
+                <a href="/playstation" class="btn-success">Jugar</a>
+                <a href="/playstation" class="btn-success">Observar</a>
+            </div>
+            <br>
+            <div id="i8" class="row">
+                <div class="v"> La PESADILLA en ESCOCIA </div>
+                <a href="/playstation" class="btn-success">Jugar</a>
+                <a href="/playstation" class="btn-success">Observar</a>
+            </div>
+            <br>
+            <div id="i9" class="row">
+                <div class="v"> La BATALLA de los 0 GRADOS </div>
+                <a href="/playstation" class="btn-success">Jugar</a>
+                <a href="/playstation" class="btn-success">Observar</a>
+            </div>
+            <br>
+            <div id="i10" class="row">
+                <div class="v"> La GUERRA de la AGRICULTURA</div>
+                <a href="/playstation" class="btn-success">Jugar</a>
+                <a href="/playstation" class="btn-success">Observar</a>
+            </div>
+            <br>
+            <div id="i11" class="row">
+                <div class="v"> El TORMENTO de los ALPES </div>
+                <a href="/playstation" class="btn-success">Jugar</a>
+                <a href="/playstation" class="btn-success">Observar</a>
+            </div>
+            <br>
+            <div id="i12" class="row">
+                <div class="v"> La BATALLA del AZUCAR, el PAN y el CHOCOLATE </div>
+                <a href="/playstation" class="btn-success">Jugar</a>
+                <a href="/playstation" class="btn-success">Observar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="g4" class="container">
+        <br>
+        <h1> El SALON de la HISTORIA</h1>
+        <div class="x">GUERRAS GANADAS: 16</div>
+        <div class="x"> GUERRAS EMPATADAS: 1</div>
+        <div class="x"> GUERRAS PERDIDAS: 2</div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const iniciarBtn = document.getElementById('partida-public');
+
+        if (iniciarBtn) {
+            iniciarBtn.addEventListener('click', async (event) => {
+                event.preventDefault();
+
+                try {
+                    const res = await fetch('/playstation/crear?type=true');
+                    const id = await res.text();
+
+                    const partidaURL = `${window.location.origin}/playstation/${id}`;
+                    const espectarURL = `${window.location.origin}/espectar/${id}`;
+
+                    sessionStorage.setItem('ultimaPartida', partidaURL);
+                    sessionStorage.setItem('urlEspectar', espectarURL);
+
+                    window.location.href = partidaURL;
+                } catch (err) {
+                    console.error('Error al crear la partida:', err);
+                    alert('No se pudo crear la partida.');
+                }
+            });
+        }
+    });
+</script>

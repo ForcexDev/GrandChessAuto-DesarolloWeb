@@ -1,0 +1,22 @@
+    /*if (password !== confirm_password) {
+        return res.send('Confirmacion de contraseña incorrecta. Por favor, <a href="/register"> Intentelo nuevamente</a>')
+    }
+    if (exist) {
+        return res.send('Este usuario ya existe <a href="/register"> Volver atras</a>')
+    }
+
+    users.push({name, apellido, date, email, password, confirm_password})
+    res.redirect('/login')*/
+
+
+        /*const auth = users.find(u => u.email === email && u.password === password)
+
+        if (!auth) {
+            return res.send('Credenciales inválidas <a href="/login"> volver atras</a>')
+        }
+
+        req.session.user = {
+            email: auth.email,
+            name: auth.name
+        };
+        res.redirect('/home')/*
