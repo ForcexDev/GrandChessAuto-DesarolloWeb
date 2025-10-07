@@ -1,4 +1,4 @@
-# Entregable Fase 3
+# Fase 3
 
 En esta tercera fase, se ha ampliado la aplicación web de ajedrez para permitir **jugar en línea entre dos usuarios**, incorporando un **sistema completo de autenticación** y la gestión básica de partidas.
 
