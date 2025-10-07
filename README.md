@@ -1,6 +1,6 @@
 # Grand Chess Auto
 
-Proyecto web de ajedrez en línea con **Node.js**, **Express**, **MongoDB** y frontend en **HTML, CSS y JavaScript**. El desarrollo se realizó en colaboración con [@BurnedGpu](https://github.com/BurnedGpu)
+Proyecto web de ajedrez en línea con **Node.js**, **Express**, **MongoDB** y frontend en **HTML, CSS y JavaScript**. El desarrollo se realizó en colaboración con [Francisco Piñera](https://github.com/BurnedGpu)
   de manera iterativa en tres fases, incrementando funcionalidad en cada etapa.
 
 ---
